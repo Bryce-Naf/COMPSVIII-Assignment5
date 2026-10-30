@@ -9,6 +9,9 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm install
 
+ARG VITE_API_URL 
+ENV VITE_API_URL=$VITE_API_URL
+
 # Copy source code
 COPY . .
 
